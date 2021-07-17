@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CalcApp</string>
+    <string name="edit_message">何か数値を入力してください</string>
 </resources>

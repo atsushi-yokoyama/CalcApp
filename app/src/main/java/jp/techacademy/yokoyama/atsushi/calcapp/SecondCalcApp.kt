@@ -10,7 +10,7 @@ class SecondCalcApp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second_calc_app)
 
-        val value1 = intent.getFloatExtra("task", 0.1)
+        val value1 = intent.getFloatExtra("task", 0.0F)
         textView.text = value1.toString()
     }
 }
