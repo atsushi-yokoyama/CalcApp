@@ -5,11 +5,9 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
+import kotlinx.android.synthetic.main.activity_second_calc_app.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,14 +21,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-
-        var a :Float = editText1.text.toString().toFloat()
-        var b :Float = editText2.text.toString().toFloat()
-        when(v.id){
-            R.id.btnAddition->addion(a, b)
-            R.id.btnSubtraction->subtraction(a, b)
-            R.id.btnMultiplication->multiplication(a, b)
-            R.id.btnDivision->division(a, b)
+        if(editText1.text.isEmpty() || editText2.text.isEmpty()) {
+        } else {
+            var a :Float = editText1.text.toString().toFloat()
+            var b :Float = editText2.text.toString().toFloat()
+            when (v.id) {
+                R.id.btnAddition -> addion(a, b)
+                R.id.btnSubtraction -> subtraction(a, b)
+                R.id.btnMultiplication -> multiplication(a, b)
+                R.id.btnDivision -> division(a, b)
+            }
         }
 
     }
